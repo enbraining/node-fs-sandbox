@@ -10,6 +10,7 @@ export async function GET() {
     const filePath = path.join(process.cwd(), "public", "contents", value);
 
     return {
+      fileName: value,
       content: fs.readFileSync(filePath, "utf8"),
     };
   });
